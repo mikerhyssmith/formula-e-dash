@@ -16,61 +16,49 @@ class PositionChart extends PureComponent<Props, State> {
     render() {
         const data = [
             {
-                "name": "Page A",
-                "uv": 4000,
-                "pv": 2400,
-                "amt": 2400
+                "name": "Lap 1",
+                "BIRD": 1,
+                "LOT": 2,
+                "ABT": 3
             },
             {
-                "name": "Page B",
-                "uv": 3000,
-                "pv": 1398,
-                "amt": 2210
+                "name": "Lap 2",
+                "BIRD": 1,
+                "LOT": 2,
+                "ABT": 3
             },
             {
-                "name": "Page C",
-                "uv": 2000,
-                "pv": 9800,
-                "amt": 2290
+                "name": "Lap 3",
+                "BIRD": 2,
+                "LOT": 3,
+                "ABT": 1
             },
             {
-                "name": "Page D",
-                "uv": 2780,
-                "pv": 3908,
-                "amt": 2000
+                "name": "Lap 4",
+                "BIRD": 3,
+                "LOT": 2,
+                "ABT": 1
             },
             {
-                "name": "Page E",
-                "uv": 1890,
-                "pv": 4800,
-                "amt": 2181
-            },
-            {
-                "name": "Page F",
-                "uv": 2390,
-                "pv": 3800,
-                "amt": 2500
-            },
-            {
-                "name": "Page G",
-                "uv": 3490,
-                "pv": 4300,
-                "amt": 2100
+                "name": "Lap 5",
+                "BIRD": 3,
+                "LOT": 1,
+                "ABT": 2
             }
         ]
         return (
             <div className="position-chart">
-                <Panel title={"Position Chart"}>
+                <Panel title={"Last 5 laps"}>
                     <ResponsiveContainer width="100%" height="100%">
-                        <LineChart width={730} height={100} data={data}
-                            margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
+                        <LineChart data={data}
+                            margin={{ top: 10, right: 1, left: 1, bottom: 10 }}>
+                            <XAxis stroke="#FFF" dataKey="name"/>
+                            <YAxis stroke="#FFF" domain={[3,1]} interval={1} reversed={true}/>
                             <Tooltip />
                             <Legend />
-                            <Line type="monotone" dataKey="pv" stroke="#8884d8" />
-                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                            <Line dot={false} strokeWidth={3} type="monotone" dataKey="BIRD" stroke="#C01C2E" />
+                            <Line dot={false} strokeWidth={3} type="monotone" dataKey="LOT" stroke="#0080B5" />
+                            <Line dot={false} strokeWidth={3} type="monotone" dataKey="ABT" stroke="#cca568" />
                         </LineChart>
                     </ResponsiveContainer>
                 </Panel>

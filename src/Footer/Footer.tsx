@@ -18,7 +18,7 @@ class Footer extends PureComponent<Props, State> {
     render() { 
         return ( 
             <footer className="footer">
-                Made with <FontAwesomeIcon color={"#540D6E"} icon={faHeart} /> by <a href="https://twitter.com/mikerhyssmith">@mikerhyssmith</a>
+                Made with <FontAwesomeIcon color={"#540D6E"} icon={faHeart} /> by <a className="footer__link" href="https://twitter.com/mikerhyssmith">@mikerhyssmith</a>
             </footer>
          );
     }
