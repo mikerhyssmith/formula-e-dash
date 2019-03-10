@@ -1,0 +1,20 @@
+@import "../style/variables";
+@import "../style/shapes";
+
+.header__title {
+    display: inline-block;
+    flex: 2;
+    width: 100vw;
+    height: 8vh;
+    background-color: $primary-blue;
+    color: $color-white;
+    font-size: 30px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.header__spacer {
+    height: 3vh;
+    background-color: $color-white;
+    width: 100vw;
+}
