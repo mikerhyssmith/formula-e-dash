@@ -1,0 +1,13 @@
+@import "../../style/variables";
+
+.panel {
+    height: 100%;
+    width: 100%;
+    background-color: $primary-blue;
+}
+
+.panel__header {
+    color: $color-white;
+    font-size: 22px;
+    border-bottom: 1px solid $color-white;
+}

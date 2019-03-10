@@ -1,5 +1,11 @@
 @import "../style/variables";
 
 .footer {
+    bottom: 0;
+    position: fixed;
     background-color: $primary-blue;
+    color: $color-white;
+    height: 25px;
+    width: 100vw;
+    text-align: center;
 }
